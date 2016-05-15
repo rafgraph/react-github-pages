@@ -1,4 +1,9 @@
+---
+### *This is deprecated, please use [Single Page Apps for GitHub Pages](https://github.com/rafrex/spa-github-pages)*  
+###### *A generic solution that works with all single page apps, not just React*
+---
 # React for GitHub Pages
+
 [Live example](http://react-github-pages.rafrex.com)  
 
 React for GitHub Pages is a lightweight solution for deploying [React][react] single page apps with [React Router][reactRouter] `browserHistory` using [GitHub Pages][ghPagesOverview].
@@ -58,25 +63,9 @@ The example site should now be live on your domain
 - One of the awesome things about the GitHub Pages CDN is that all files are automatically compressed with gzip, so no need to worry about compressing your JavaScript, HTML or CSS files for production
 
 
-## Want to help?
-- Fork this repo and port the boilerplate over to another frontend framework
-- This should be pretty straight forward as the [`404.html`][404html] page and most of the logic in [`index.js`][indexjs] can remain the same
-- You'll have to figure out the equivalent of:
-  - Checking if a redirect is required before loading the app (the equivalent of the [`checkForRedirect` onEnter hook][onEnterRedirect])
-  - Accessing the query string from within the framework (the equivalent of [`nextState`][nextState], alternatively you could get this from `window.location.search`)
-  - Using the framework's router to goto the correct path after parsing the redirect query (the equivalent of [`replace(redirectTo)`][redirectTo], note that you can't use `window.location.replace` as that will make a request to GitHub Pages' static server, which will return the 404 page and start an infinite redirect loop)
-
-Pull requests welcome. Please open [issues][issues] to report bugs.  
-Thoughts, questions, suggestions? Contact me via [email][email] or [twitter][twitter].
-
-
-
 
 
 <!-- links to within repo -->
-[indexjs]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js
-[nextState]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L20
-[redirectTo]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L60
 [setRepoName]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L74
 [setDomain]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L77
 [routes]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L84
@@ -86,7 +75,6 @@ Thoughts, questions, suggestions? Contact me via [email][email] or [twitter][twi
 [404html]: https://github.com/rafrex/react-github-pages/blob/gh-pages/404.html
 [404htmlTitle]: https://github.com/rafrex/react-github-pages/blob/gh-pages/404.html#L5
 [cnameFile]: https://github.com/rafrex/react-github-pages/blob/gh-pages/CNAME
-[issues]: https://github.com/rafrex/react-github-pages/issues
 
 <!-- links to github docs -->
 [ghPagesOverview]: https://pages.github.com/
@@ -102,5 +90,3 @@ Thoughts, questions, suggestions? Contact me via [email][email] or [twitter][twi
 [webpackProduction]: https://webpack.github.io/docs/cli.html#production-shortcut-p
 [webpackDevelopment]: https://webpack.github.io/docs/cli.html#development-shortcut-d
 [formspree]: http://formspree.io/
-[email]: mailto:code@rafrex.com
-[twitter]: https://twitter.com/rafrrex
