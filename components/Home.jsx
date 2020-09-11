@@ -13,7 +13,7 @@ function Home() {
         (like this one).
       </p>
       <p>
-        Please see <a href="https://github.com/rafrex/react-github-pages#readme">
+        Please see <a href="https://github.com/rafgraph/react-github-pages#readme">
         the repo readme</a> for instructions on how to use this boilerplate to deploy your
         own React project using GitHub Pages.
       </p>

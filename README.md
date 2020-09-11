@@ -1,10 +1,10 @@
 ---
-### *This is deprecated, please use [Single Page Apps for GitHub Pages](https://github.com/rafrex/spa-github-pages)*  
+### *This is deprecated, please use [Single Page Apps for GitHub Pages](https://github.com/rafgraph/spa-github-pages)*  
 ###### *A generic solution that works with all single page apps, not just React*
 ---
 # React for GitHub Pages
 
-[Live example](http://react-github-pages.rafrex.com)  
+[Live example](https://react-github-pages.rafgraph.dev)  
 
 React for GitHub Pages is a lightweight solution for deploying [React][react] single page apps with [React Router][reactRouter] `browserHistory` using [GitHub Pages][ghPagesOverview].
 
@@ -26,12 +26,12 @@ The other issue of GitHub Pages always being available at `/my-repo-name` is han
 ## Usage instructions
 *For general information on using GitHub Pages please see [GitHub Pages Basics][ghPagesBasics], note that pages can be [User, Organization or Project Pages][ghPagesTypes]*  
 
-1. Clone this repo (`$ git clone https://github.com/rafrex/react-github-pages.git`)
+1. Clone this repo (`$ git clone https://github.com/rafgraph/react-github-pages.git`)
 2. Delete the `.git` directory (`cd` into the `react-github-pages` directory and run `$ rm -rf .git`)
 3. Instantiate the repository
   - If you're using this boilerplate as a new repository
     - `$ git init` in the `react-github-pages` directory, and then `$ git add .` and `$ git commit -m "Add React for GitHub Pages boilerplate"` to initialize a fresh repository
-    - If this will be a Project Pages site, then change the branch name from `master` to `gh-pages` (`$ git branch -m gh-pages`), if this will be a User or Organization Pages site, then leave the branch name as `master`
+    - If this will be a Project Pages site, then change the branch name from `main` to `gh-pages` (`$ git branch -m gh-pages`), if this will be a User or Organization Pages site, then leave the branch name as `main`
     - Create an empty repo on GitHub.com (don't add a readme, gitignore or license), and add it as a remote to the local repo (`$ git remote add origin <your-new-github-repo-url>`)
     - Feel free to rename the local `react-github-pages` directory to anything you wnat (e.g. `your-project-name`)
   - If you're adding this boilerplate as the `gh-pages` branch of an existing repository
@@ -41,19 +41,19 @@ The other issue of GitHub Pages always being available at `/my-repo-name` is han
     - `$ git add .` and `$ git commit -m "Add React for GitHub Pages boilerplate"` to instantiate the `gh-pages` branch
 4. Set up your custom domain - see GitHub Pages instructions for [setting up a custom domain][customDomain]
  - *Note that you must use a custom domain if you are setting up a Project Pages site in order for GitHub Pages to serve the custom 404 page, however, if you are creating a User or Organization Pages site, then using a custom domain is optional (if you don't use a custom domain delete the `CNAME` file)*
- - Update the [`CNAME` file][cnameFile] with your custom domain, don't include `http://`, but do include a subdomain if desired, e.g. `www` or `your-subdomain`
+ - Update the [`CNAME` file][cnameFile] with your custom domain, don't include `https://`, but do include a subdomain if desired, e.g. `www` or `your-subdomain`
  - Update your `CNAME` and/or `A` record with your DNS provider
- - Run `$ dig your-subdomain.your-domain.tld` to make sure it's set up properly with your DNS (don't include `http://`)
+ - Run `$ dig your-subdomain.your-domain.tld` to make sure it's set up properly with your DNS (don't include `https://`)
 5. [Set your repo name in index.js][setRepoName], this should match your repository name as it is listed on GitHub
-6. [Set your domain name in index.js][setDomain], if you are using a custom domain then this should match the domain in your `CNAME` file (except include the `http://`), if you are not using a custom domain, then this will be `http://<your github username or orgname>.github.io`
+6. [Set your domain name in index.js][setDomain], if you are using a custom domain then this should match the domain in your `CNAME` file (except include the `https://`), if you are not using a custom domain, then this will be `https://<your github username or orgname>.github.io`
 7. Run `$ npm install` to install React and other dependencies, and then run `$ webpack` to update the build
-8. `$ git add .` and `$ git commit -m "Update boilerplate for use with my domain"` and then push to GitHub (`$ git push origin gh-pages` for Project Pages or `$ git push origin master` for User or Organization Pages)
+8. `$ git add .` and `$ git commit -m "Update boilerplate for use with my domain"` and then push to GitHub (`$ git push origin gh-pages` for Project Pages or `$ git push origin main` for User or Organization Pages)
 
 The example site should now be live on your domain
 
 ##### Creating your own site
 - Write your own React components, create your own [routes][routes], and add some style!
-- Change the [title in `index.html`][indexHtmlTitle] and the [title in `404.html`][404htmlTitle] to your site's title, also [remove the Google analytics script][googleAnalytics] from the header of `index.html` (the analytics function is wrapped in an `if` statement so that it will only run on the example site's domain (http://react-github-pages.rafrex.com), but you don't need it, so remove it or replace it with your own analytics)
+- Change the [title in `index.html`][indexHtmlTitle] and the [title in `404.html`][404htmlTitle] to your site's title, also [remove the Google analytics script][googleAnalytics] from the header of `index.html` (the analytics function is wrapped in an `if` statement so that it will only run on the example site's domain (https://react-github-pages.rafgraph.dev), but you don't need it, so remove it or replace it with your own analytics)
 - Change the readme and license as you see fit
 - After you update your code run `$ webpack` (or `$ webpack -p` for [production][webpackProduction], or `-d` for [development][webpackDevelopment]) to update the build, then `$ git commit` and `$ git push` to make your changes live
 
@@ -66,15 +66,15 @@ The example site should now be live on your domain
 
 
 <!-- links to within repo -->
-[setRepoName]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L74
-[setDomain]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L77
-[routes]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L84
-[onEnterRedirect]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.js#L86
-[indexHtmlTitle]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.html#L6
-[googleAnalytics]: https://github.com/rafrex/react-github-pages/blob/gh-pages/index.html#L9
-[404html]: https://github.com/rafrex/react-github-pages/blob/gh-pages/404.html
-[404htmlTitle]: https://github.com/rafrex/react-github-pages/blob/gh-pages/404.html#L5
-[cnameFile]: https://github.com/rafrex/react-github-pages/blob/gh-pages/CNAME
+[setRepoName]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/index.js#L74
+[setDomain]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/index.js#L77
+[routes]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/index.js#L84
+[onEnterRedirect]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/index.js#L86
+[indexHtmlTitle]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/index.html#L6
+[googleAnalytics]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/index.html#L9
+[404html]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/404.html
+[404htmlTitle]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/404.html#L5
+[cnameFile]: https://github.com/rafgraph/react-github-pages/blob/gh-pages/CNAME
 
 <!-- links to github docs -->
 [ghPagesOverview]: https://pages.github.com/
@@ -89,4 +89,4 @@ The example site should now be live on your domain
 [reactRouter]: https://github.com/reactjs/react-router
 [webpackProduction]: https://webpack.github.io/docs/cli.html#production-shortcut-p
 [webpackDevelopment]: https://webpack.github.io/docs/cli.html#development-shortcut-d
-[formspree]: http://formspree.io/
+[formspree]: https://formspree.io/
